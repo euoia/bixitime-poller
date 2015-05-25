@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/euoia/bixitime-poller#readme",
   "dependencies": {
+    "bixitime-lib-logging": "https://github.com/euoia/bixitime-lib-logging",
     "bluebird": "^2.9.25",
     "check-types": "^3.2.0",
     "lodash": "^3.9.2",

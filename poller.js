@@ -55,7 +55,7 @@ function check() {
 					id: station.id[0],
 					name: station.name[0],
 					terminalName: station.terminalName[0],
-					lastCommWithServer: toDate(station.lastCommWithServer[0]),
+					lastCommWithServer: null,
 					lat: station.lat[0],
 					long: station.long[0],
 					installed: toBool(station.installed[0]),
@@ -66,7 +66,7 @@ function check() {
 					public: toBool(station.public[0]),
 					bikes: parseInt(station.nbBikes[0], 10),
 					emptyDocks: parseInt(station.nbEmptyDocks[0]),
-					latestUpdateTime: toDate(station.latestUpdateTime[0]),
+					latestUpdateTime: null,
 				};
 
 				newStation.totalDocks = newStation.bikes + newStation.emptyDocks;

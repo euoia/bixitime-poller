@@ -2,7 +2,7 @@ var
 	Bluebird = require('bluebird'),
 	_ = require('lodash'),
 	mysql = require('mysql'),
-	dbConfig = require('./config.json').database,
+	config = require('./config.json'),
 	logging = require('bixitime-lib-logging'),
 	log = require('winston');
 
@@ -13,8 +13,8 @@ var request = Bluebird.promisify(require('request'));
 var apiUrl = 'https://montreal.bixi.com/data/bikeStations.xml';
 var checkIntervalSeconds = 60;
 
-var connection = mysql.createConnection(dbConfig);
-logging.configureWinston(connection);
+var connection = mysql.createConnection(config.database);
+logging.configureWinston(connection, config.logging.level);
 
 function check() {
 	request(apiUrl).spread(function (response, body) {

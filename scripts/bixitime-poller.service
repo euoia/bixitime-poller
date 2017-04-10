@@ -6,8 +6,8 @@ Documentation=https://github.com/euoia/bixitime-poller
 After=network.target
 
 [Service]
-User=pi
-Group=pi
+User=james
+Group=james
 LimitNOFILE=65536
 ExecStart=/home/james/.nvm/versions/node/v7.4.0/bin/node -r /home/james/bixitime-poller/poller.js
 KillMode=control-group

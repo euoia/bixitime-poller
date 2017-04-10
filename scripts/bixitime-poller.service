@@ -15,4 +15,4 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-Alias=temperature-monitor.service
+Alias=bixitime-poller.service
